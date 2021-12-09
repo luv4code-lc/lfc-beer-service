@@ -39,4 +39,6 @@ public class BeerServiceImpl implements BeerService {
 
         return beerMapper.beerToBeerDto(repository.save(beer));
     }
+
+
 }
