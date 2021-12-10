@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/v1/beer")
+@RequestMapping("/api/v1/")
 @RequiredArgsConstructor
 public class BeerController {
 
@@ -25,7 +25,7 @@ public class BeerController {
     private static final Integer DEFAULT_PAGE_SIZE = 25;
 
 
-    @GetMapping(produces = {"application/json"})
+    @GetMapping(produces = {"application/json"}, path = "beer")
     private ResponseEntity<BeerPagedList> listBeers(
             @RequestParam(value = "pageNumber", required = false) Integer pageNumber,
             @RequestParam(value = "pageSize", required = false) Integer pageSize,
@@ -49,7 +49,7 @@ public class BeerController {
     }
 
 
-    @GetMapping("/{beerId}")
+    @GetMapping("beer/{beerId}")
     public ResponseEntity<BeerDto> getBeerById(@Validated @PathVariable UUID beerId,
                                                @RequestParam(value = "showInventoryOnHand", required = false) Boolean showInventoryOnHand) {
         if (showInventoryOnHand == null) {
@@ -58,13 +58,18 @@ public class BeerController {
         return new ResponseEntity<>(beerService.getBeerById(beerId, showInventoryOnHand), HttpStatus.OK);
     }
 
+    @GetMapping("beerUpc/{upc}")
+    public ResponseEntity<BeerDto> getBeerByUpc( @PathVariable("upc") String upc) {
+        return new ResponseEntity(beerService.getByUpc(upc), HttpStatus.OK);
+    }
 
-    @PostMapping
+
+    @PostMapping(path = "beer")
     public ResponseEntity saveNewBear(@RequestBody BeerDto beerDto) {
         return new ResponseEntity(beerService.saveNewBeer(beerDto), HttpStatus.CREATED);
     }
 
-    @PutMapping("/{beerId}")
+    @PutMapping(path = "beer/{beerId}")
     public ResponseEntity updateBeerById(@PathVariable UUID beerId, @Validated @RequestBody BeerDto beerDto) {
         return new ResponseEntity(beerService.updateBeer(beerId, beerDto), HttpStatus.NO_CONTENT);
     }
