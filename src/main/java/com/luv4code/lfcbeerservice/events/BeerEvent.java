@@ -1,17 +1,16 @@
 package com.luv4code.lfcbeerservice.events;
 
 import com.luv4code.lfcbeerservice.web.model.BeerDto;
-import lombok.Builder;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import java.io.Serializable;
 
 @Data
+@AllArgsConstructor
 @Builder
-@RequiredArgsConstructor
+@NoArgsConstructor
 public class BeerEvent implements Serializable {
     private final long serialVersionUID = -895956677169828371L;
-    private final BeerDto beerDto;
+    private BeerDto beerDto;
 
 }
