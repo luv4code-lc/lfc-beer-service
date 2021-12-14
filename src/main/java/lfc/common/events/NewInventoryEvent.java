@@ -1,11 +1,11 @@
-package com.luv4code.lfcbeerservice.events;
+package lfc.common.events;
 
 import com.luv4code.lfcbeerservice.web.model.BeerDto;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-public class BrewBeerEvent extends BeerEvent {
-    public BrewBeerEvent(BeerDto beerDto) {
+public class NewInventoryEvent extends BeerEvent {
+    public NewInventoryEvent(BeerDto beerDto) {
         super(beerDto);
     }
 }

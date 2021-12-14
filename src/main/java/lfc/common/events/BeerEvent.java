@@ -1,4 +1,4 @@
-package com.luv4code.lfcbeerservice.events;
+package lfc.common.events;
 
 import com.luv4code.lfcbeerservice.web.model.BeerDto;
 import lombok.*;

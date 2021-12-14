@@ -2,7 +2,7 @@ package com.luv4code.lfcbeerservice.services.brewing;
 
 import com.luv4code.lfcbeerservice.config.JmsConfig;
 import com.luv4code.lfcbeerservice.domain.Beer;
-import com.luv4code.lfcbeerservice.events.BrewBeerEvent;
+import lfc.common.events.BrewBeerEvent;
 import com.luv4code.lfcbeerservice.repositories.BeerRepository;
 import com.luv4code.lfcbeerservice.services.inventory.BeerInventoryService;
 import com.luv4code.lfcbeerservice.web.mappers.BeerMapper;
