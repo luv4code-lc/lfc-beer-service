@@ -1,9 +1,9 @@
 package com.luv4code.lfcbeerservice.web.controller;
 
 import com.luv4code.lfcbeerservice.services.BeerService;
-import com.luv4code.lfcbeerservice.web.model.BeerDto;
-import com.luv4code.lfcbeerservice.web.model.BeerPagedList;
-import com.luv4code.lfcbeerservice.web.model.BeerStyleEnum;
+import com.luv4code.brewery.model.BeerDto;
+import com.luv4code.brewery.model.BeerPagedList;
+import com.luv4code.brewery.model.BeerStyleEnum;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
@@ -11,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.UUID;
 
 @RestController

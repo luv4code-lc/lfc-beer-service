@@ -1,6 +1,6 @@
-package lfc.common.events;
+package com.luv4code.brewery.model.events;
 
-import com.luv4code.lfcbeerservice.web.model.BeerDto;
+import com.luv4code.brewery.model.BeerDto;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor

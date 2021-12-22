@@ -1,12 +1,11 @@
 package com.luv4code.lfcbeerservice.repositories;
 
 import com.luv4code.lfcbeerservice.domain.Beer;
-import com.luv4code.lfcbeerservice.web.model.BeerStyleEnum;
+import com.luv4code.brewery.model.BeerStyleEnum;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.PagingAndSortingRepository;
 
 import java.util.UUID;
 

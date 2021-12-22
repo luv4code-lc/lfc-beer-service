@@ -1,7 +1,7 @@
 package com.luv4code.lfcbeerservice.web.mappers;
 
 import com.luv4code.lfcbeerservice.domain.Beer;
-import com.luv4code.lfcbeerservice.web.model.BeerDto;
+import com.luv4code.brewery.model.BeerDto;
 import org.mapstruct.DecoratedWith;
 import org.mapstruct.Mapper;
 

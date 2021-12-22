@@ -2,10 +2,10 @@ package com.luv4code.lfcbeerservice.services.brewing;
 
 import com.luv4code.lfcbeerservice.config.JmsConfig;
 import com.luv4code.lfcbeerservice.domain.Beer;
-import lfc.common.events.BrewBeerEvent;
-import lfc.common.events.NewInventoryEvent;
+import com.luv4code.brewery.model.events.BrewBeerEvent;
+import com.luv4code.brewery.model.events.NewInventoryEvent;
 import com.luv4code.lfcbeerservice.repositories.BeerRepository;
-import com.luv4code.lfcbeerservice.web.model.BeerDto;
+import com.luv4code.brewery.model.BeerDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.annotation.JmsListener;

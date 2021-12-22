@@ -1,4 +1,4 @@
-package com.luv4code.lfcbeerservice.web.model;
+package com.luv4code.brewery.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
